@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 | LC_ALL=C sort -df | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/, /g'
+ls -ap1 | LC_ALL=C sort -df | awk '{printf "%s, ", $0}' | sed -e 's/\.\.\///' -e 's/\.\///' -e 's/, $/\n/'
