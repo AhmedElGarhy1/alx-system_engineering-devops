@@ -1,1 +1,1 @@
-Day 2
+README.md is not empty :)
